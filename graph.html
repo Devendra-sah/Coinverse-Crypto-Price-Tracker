@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinverse - Price Graph</title>
+
+    <link rel="stylesheet" href="css/graph.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <!-- Ionicon Links -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="webapp">
+      <!-- NAVAIGATION -->
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="assets/favicon.svg"
+            alt="Coinverse Logo"
+            height="32"
+            width="32"
+          />
+          <h1>Coinverse</h1>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right">
+          <select id="currency-select" class="currency-select">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="inr">INR</option>
+          </select>
+          <button class="btn">Wallet</button>
+        </div>
+      </div>
+
+      <div class="header">
+        <div class="coin-info">
+          <img id="coin-logo" src="" alt="Coin Logo" />
+          <div>
+            <h1 id="coin-name">Loading...</h1>
+            <div class="current-price" id="current-price">$0.00</div>
+          </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Back
+        </button>
+      </div>
+      <div class="range-selector">
+        <button class="range-btn" data-days="1">1D</button>
+        <button class="range-btn" data-days="7">7D</button>
+        <button class="range-btn active" data-days="30">30D</button>
+      </div>
+      <div id="error"></div>
+      <div class="graph-container">
+        <canvas id="price-chart"></canvas>
+      </div>
+    </div>
+
+    <script src="script/graph.js" defer></script>
+  </body>
+</html>

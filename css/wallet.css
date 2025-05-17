@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(#0b004e, #1d152f, #002834);
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: white;
+  border-bottom: 2px solid #3c3c3c;
+}
+
+.navbar .logo {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: max(1vw, 12px);
+}
+
+.navbar .btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  background: white;
+  color: #393939;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .btn:hover {
+  background: #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.total-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.add-coin-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.add-coin-form input,
+.add-coin-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  color: #393939;
+}
+
+.add-coin-form select {
+  background: white;
+}
+
+.add-coin-form button {
+  padding: 10px 20px;
+  background: #7927ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-coin-form button:hover {
+  background: #6721d9;
+}
+
+.wallet-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(rgba(84, 3, 225, 0.15), rgba(105, 2, 153, 0.15));
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+th {
+  background: linear-gradient(rgba(84, 3, 225, 0.15), rgba(105, 2, 153, 0.15));
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+td {
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.coin-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-cell img {
+  width: 24px;
+  height: 24px;
+}
+
+.remove-btn {
+  background: #f87171;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #d65f5f;
+}
+
+#error {
+  text-align: center;
+  color: #f87171;
+  margin: 20px 0;
+  display: none;
+}

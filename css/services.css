@@ -1,0 +1,123 @@
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(#0b004e, #1d152f, #002834);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: white;
+  border-bottom: 2px solid #3c3c3c;
+}
+
+.navbar .logo {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: max(1vw, 12px);
+}
+
+.navbar select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.navbar option {
+  background: #09005c;
+  color: white;
+}
+
+.navbar .btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  background: white;
+  color: #393939;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .btn:hover {
+  background: #e0e0e0;
+}
+
+.services-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.services-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service ion-icon {
+  font-size: 40px;
+  color: #7927ff;
+}
+
+.service-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
