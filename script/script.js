@@ -64,8 +64,8 @@ function displayCoins(coins) {
                 <img src="${coin.image}" alt="${coin.name}">
                 <span>${coin.name}</span>
             </td>
-            <td>${currencySymbol}${coin.current_price.toFixed(2)}</td>
-            <td class="${changeClass}">${coin.price_change_percentage_24h.toFixed(2)}%</td>
+            <td>${currencySymbol}${coin.current_price.toFixed(5)}</td>
+            <td class="${changeClass}">${coin.price_change_percentage_24h.toFixed(8)}%</td>
             <td>${currencySymbol}${coin.market_cap.toLocaleString()}</td>
         `;
 

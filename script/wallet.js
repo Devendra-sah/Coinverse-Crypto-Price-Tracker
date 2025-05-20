@@ -78,15 +78,15 @@
               <span>${coin.name}</span>
             </td>
             <td>${holding.quantity.toFixed(4)}</td>
-            <td>$${price.toFixed(2)}</td>
-            <td>$${value.toFixed(2)}</td>
+            <td>$${price.toFixed(5)}</td>
+            <td>$${value.toFixed(5)}</td>
             <td><button class="remove-btn" data-index="${index}">Remove</button></td>
           `;
           walletTableBody.appendChild(tr);
         });
 
         // Update total portfolio value
-        totalValueElement.textContent = `$${totalValue.toFixed(2)}`;
+        totalValueElement.textContent = `$${totalValue.toFixed(5)}`;
 
         // Add event listeners to remove buttons
         document.querySelectorAll('.remove-btn').forEach(button => {
