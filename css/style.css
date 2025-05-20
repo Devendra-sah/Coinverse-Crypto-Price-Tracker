@@ -108,9 +108,7 @@ a {
   max-width: 600px;
   margin: 2% auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 30px;
  }
 
@@ -207,9 +205,6 @@ a {
     display: none;
   }
 
-  /*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
 /* Footer Styles */
 .footer {
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -388,7 +383,7 @@ a {
 
 .copyright {
   color: #b0b0b0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
 }
 
