@@ -38,7 +38,7 @@ async function fetchCryptoData() {
             throw new Error('No data returned from API');
         }
         allCoins = data; // Store the fetched data
-        displayCoins(allCoins.slice(0, 10)); // Display the first 10 coins initially
+        displayCoins(allCoins.slice(0, 25)); // Display the first 25 coins initially
     } catch (error) {
         errorDiv.style.display = 'block';
         errorDiv.textContent = `Error: ${error.message}`;
@@ -53,7 +53,7 @@ function displayCoins(coins) {
         if (!coin.image || !coin.current_price || !coin.price_change_percentage_24h || !coin.market_cap) {
             console.warn(`Incomplete data for coin: ${coin.name || 'Unknown'}`);
             return; // Skip coins with missing data
-          }
+        }
 
         const tr = document.createElement('tr');
         const changeClass = coin.price_change_percentage_24h < 0 ? 'change-negative' : 'change-positive';
@@ -87,15 +87,15 @@ function searchCoins(event) {
     let filteredCoins = [];
 
     if (searchTerm) {
-        filteredCoins = allCoins.filter(coin => 
+        filteredCoins = allCoins.filter(coin =>
             coin.name && coin.name.toLowerCase().includes(searchTerm)).slice(0, 10); // Limit to 10 coins after filtering
     } else {
-        filteredCoins = allCoins.slice(0, 10); // Show top 10 if search is empty
+        filteredCoins = allCoins.slice(0, 25); // Show top 25 if search is empty
     }
 
     if (filteredCoins.length === 0) {
         errorDiv.style.display = 'block';
-        errorDiv.textContent = 'No coins found matching your search.';   
+        errorDiv.textContent = 'No coins found matching your search.';
     }
     else {
         errorDiv.style.display = 'none';
